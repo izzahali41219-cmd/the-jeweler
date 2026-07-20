@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<head>
+   <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>the jewler </title>
+<style>
+    @media (max-width:768px){
+
+    .header{
+        width:100%;
+        padding:15px;
+        justify-content:center;
+        height:auto;
+    }
+
+    .logo,
+    .header h1{
+        font-size:32px !important;
+        margin:0;
+        text-align:center;
+    }
+
+    #menu-btn{
+        left:10px;
+        top:15px;
+        font-size:28px;
+    }
+
+    .img{
+        height:auto;
+        padding:120px 20px 60px;
+        margin-top:0;
+    }
+
+    .text{
+        width:100%;
+        margin:0;
+        text-align:center;
+    }
+
+    .text h1{
+        font-size:36px;
+    }
+
+    .text p{
+        width:100%;
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .products{
+        padding:20px;
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:340px;
+        margin:auto;
+    }
+
+    .card img{
+        height:260px;
+    }
+
+    .box{
+        width:90%;
+        margin:30px auto;
+    }
+
+    footer{
+        width:100%;
+    }
+
+    ul{
+        flex-direction:column;
+    }
+}
+
+  
+body{
+    background-color:rgb(50, 49, 52);
+ 
+    margin:0;
+    overflow-x:hidden;
+  
+}
+ul { 
+    list-style-type: none; margin: 0; padding: 0;  display: flex;
+}
+ ul li a {
+          
+     display: block; color: white; padding: 14px 16px; text-decoration: none; 
+}
+ul li a:hover {
+         background-color: #252024;
+}     
+.text{
+    width: 450px;
+    margin-left: 5%;
+    margin-top: 9%;
+  
+
+}
+.sidebar{
+    position:fixed;
+    left:-300px;
+    top:0;
+    width:300px;
+    height:100vh;
+    background:#0d0d0d;
+    transition:.4s;
+    overflow:left;
+    border: #3a3a39 solid 2px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:22px;
+    font-size:20px;
+}
+
+.sidebar a:hover{
+    background:#383636;
+}
+
+.close{
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+    padding:40px;
+    display:block;
+    background-color: white;
+}
+
+#menu-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    font-size:35px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    z-index:1000;
+}   
+.sidebar a:hover{
+    color:#c77d1a;
+    padding-left:12px;
+    transition:.3s;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 130px;
+    display: flex;
+    margin-left: 0.3%;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    z-index: 1000;
+     border: #0d0d0d groove 4px;
+}
+    
+    
+
+   .logo {
+            font-family: 'Alex Brush', cursive;
+            font-size: 48px;
+            color: white;
+            text-shadow: 2px 2px 4px #D4AF37;
+        }
+
+  .img{
+    background-image: url('https://cdn.dribbble.com/userupload/21556164/file/original-1db6c10ca2920131bf30dbfc99e810da.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    color: #7d7c7c;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:100px 8%;
+    gap:60px;
+box-sizing: border-box;}
+
+.text h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+    margin-bottom:20px;
+}
+
+.text p{
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    margin-top: 15px;
+    margin-left: 0;
+    line-height: 1.8;
+    color: #c9c9c9;
+    width: 85%;
+      font-size:18px;
+}
+p{
+ font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    margin-top: 15px;
+    margin-left: 0;
+    line-height: 1.8;
+    color: #c9c9c9;
+    width: 85%;
+    line-height: 1.8
+}
+h1{
+    font-family: 'Alex brush'; 
+    font-size: 50px;
+    margin-right: 20px;
+    color:whitesmoke
+}
+
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 40px 5%;
+        }
+
+        .card {
+            width: 280px;
+            background: #2a2a2a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: all 0.3s;
+            border: rgb(12, 12, 12) double 4px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+          
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+              transition:.4s;
+        }
+
+        .card h3 {
+            margin: 12px 12px 6px;
+            font-size: 21px;
+            line-height: 1.3;
+            color: white;
+        }
+
+        .rating {
+            color: #c77d1a;
+            margin: 6px 12px;
+            font-size: 18px;
+        }
+
+        .card h4 {
+            margin: 8px 12px 15px;
+            font-size: 21px;
+            color: #fff;
+        }
+.box{
+   
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color:#434243;
+    padding: 10px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-left: 20%;
+    text-align: center;
+    border: #0a0a0a double 8px;
+    width:90%;
+max-width:700px;
+margin:40px auto;
+}
+footer{
+    background:#101010;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    width: 96.5%;
+    height: 20%;
+    margin-top: 15px;
+}
+.cart-btn{
+    background:#c77d1a;
+    color:white;
+    border:none;
+    padding:12px;
+    width:90%;
+    margin:10px auto 15px;
+    display:block;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#e4a33b;
+}
+
+#cart-icon{
+    position:absolute;
+    right:25px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+#cart-count{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:rgb(71, 71, 70);
+    color:white;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+}
+
+.cart{
+    position:fixed;
+    right:-400px;
+    top:0;
+    width:350px;
+    height:100%;
+    background:#202020;
+    color:white;
+    transition:.4s;
+    z-index:2000;
+    overflow:auto;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.cart.active{
+    right:0;
+}
+
+.cart h2{
+    text-align:center;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    border-bottom:1px solid #555;
+    padding-bottom:10px;
+}
+
+.cart button{
+    background:#c77d1a;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.close-cart{
+    font-size:30px;
+    cursor:pointer;
+    float:right;
+}
+
+.total{
+    margin-top:20px;
+    font-size:22px;
+    text-align:center;
+}
+.card{
+    position:relative;
+    overflow:hidden;
+}
+
+.wishlist-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    color:#c77d1a;
+    font-size:22px;
+    cursor:pointer;
+
+    opacity:0;
+    transform:translateY(-15px);
+
+    transition:.3s;
+}
+
+.card:hover .wishlist-btn{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.wishlist-btn:hover{
+    background:#c77d1a;
+    color:white;
+}
+#wishlist-icon{
+    position:fixed;
+    top:22px;
+    right:75px;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+    z-index:1200;
+}
+
+#wishlist-count{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    background:red;
+    color:white;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+}
+</style>
+</head>
+<body>
+    <section id="home"><div class="header"><h1  style="font-family: 'Alex brush'; font-size: 50px;margin-right: 40px;margin-bottom: -40;"><i><b>The Jewler</b></i></h1>
+<button id="menu-btn" onclick="openMenu()">☰</button>
+<div id="wishlist" class="cart">
+
+
+</div>
+<div id="cart-icon" onclick="toggleCart()">
+    🛒
+    <span id="cart-count">0</span>
+</div>
+<div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="closeMenu()"><b>✕</b></span>
+
+    <a href="#home">Home</a>
+    <a href="#best-seller">best seller</a>
+    <a href="#gold">Gold</a>
+    <a href="#diamond">Diamond</a>
+    <a href="#contact">contact us</a>
+    
+</div>
+    </section>
+    <div id="cart" class="cart">
+
+    <span class="close-cart" onclick="toggleCart()">✕</span>
+
+    <h2>Shopping Cart</h2>
+
+    <div id="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div class="total">
+        Total: $<span id="total">0.00</span>
+    </div>
+
+</div>
+    <section class="img">
+    <div class="text">
+        <h1><i>THE JEWLER</i></h1><br>
+    <p align="center">Discover a world of exquisite craftsmanship where every piece is designed to celebrate life’s most precious moments. From stunning diamonds and handcrafted gold jewelry to elegant watches and timeless accessories, our collections blend exceptional quality with sophisticated style. Whether it’s a special occasion or your perfect everyday piece, we help you shine with confidence and elegance.
+    </section>
+    <hr>
+    <seaction id="best-seller"><h1 align="center"><ins>BEST SELLER</ins></h1>
+        </seaction>
+ <div class="products">
+
+    <div class="card">
+
+    <button class="wishlist-btn"
+    data-name="14K Gold Plated Hand Chain for Women"
+    data-price="9.99">
+        <span class="material-icons">favorite_border</span>
+    </button>
+
+    <a href="https://a.co/d/06baajAc">
+        <img src="https://m.media-amazon.com/images/I/61QWSGjj+JL._AC_SY675_.jpg" alt="hand chain">
+    </a>
+
+    <h3>14K Gold Plated Hand Chain for Women</h3>
+
+    <div class="rating">
+        ★★★★★ <span>120 reviews</span>
+    </div>
+
+    <h4>$9.99</h4>
+
+    <button class="cart-btn"
+    data-name="14K Gold Plated Hand Chain for Women"
+    data-price="9.99">
+        🛒 Add to Cart
+    </button>
+
+</div>
+
+    <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0gfw1y7v">
+        <img src="https://m.media-amazon.com/images/I/61JraPUTkoL._AC_SY675_.jpg" alt="dold ankle"></a>
+
+        <h3>DEARMAY Gold Ankle Bracelets for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>24 reviews</span>
+        </div>
+
+        <h4>9.99$</h4>
+       <button class="cart-btn"
+data-name="DEARMAY Gold Ankle Bracelets for Women"
+data-price="9.99">
+🛒 Add to Cart
+</button>
+    </div>
+<div class="card">
+    <button class="wishlist-btn">♡</button>
+        <a href="https://amzn.in/d/0b0eJgZv">
+        <img src="https://m.media-amazon.com/images/I/71WSo5YxvSL._SY695_.jpg" alt=""></a>
+
+        <h3>SALTY Diamond Drape Tassel Necklace for Women & Girlsn</h3>
+
+        <div class="rating">
+            ★★★★★ <span>159 reviews</span>
+        </div>
+        <h4>400$</h4>
+      <button class="cart-btn"
+data-name="SALTY Diamond Drape Tassel Necklace"
+data-price="400">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://www.amazon.com/Tatibana-Bracele-Bracelets-Adjustable-Bracelet/dp/B0C7PZQC4C/ref=sr_1_9?crid=2OS7RAP0G93PG&dib=eyJ2IjoiMSJ9.zXUcNTFykWqdE8kGTW5JAey1qig0GP28QW4O6ZJGbYLgkzudZuXGAnKelqaKoQKV6bneELkZ1khpj9s2ZZMDmfqv-4T0oszSOZeiglCrsyKGkUQBmCH8_98XHGUaF0o5F8Rp_yI-NO-34OGqPJGzRzGTJD_4lu5Q6RoeaQAnPrrF0_0YMPKtMhve09YUoQAnqqFKar4vsE4uTVkEx6mOFduFJU_pRKRmdn9Z3Cb-3BDbwKm4PfNtT25HyUc-Rvv6QfSTSSvc7e-47plreSr2FbLpMKxEzbUSybnsbWymbmQ.LNsm7rKAnWQqm05PIz7fdtG0al1AjLJEtO0NrhaMEH8&dib_tag=se&keywords=diamond+jewelry&qid=1784460818&sprefix=diamond+jewelry%2Caps%2C395&sr=8-9">
+        <img src="https://m.media-amazon.com/images/I/61uBgjRBQZL._AC_SY675_.jpg" alt=""></a>
+
+        <h3>Tennis  Bracelet</h3>
+
+        <div class="rating">
+            ★★★★★ <span>244 reviews</span>
+        </div>
+
+        <h4>6$</h4>
+       <button class="cart-btn"
+data-name="Tennis Bracelet"
+data-price="6">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0a7thrno">
+        <img src="https://m.media-amazon.com/images/I/61HMc9qiscL._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3> Boho Wedding Small Rhinestone Solitaire Dainty Cz Necklace Silver Tiny Pendant</h3>
+        <div class="rating">
+            ★★★★★ <span>293 reviews</span>
+        </div>
+
+        <h4>8.50$</h4>
+      <button class="cart-btn"
+data-name="Boho Wedding Rhinestone Necklace"
+data-price="8.50">
+🛒 Add to Cart
+</button>
+    </div>
+</div>
+<hr>
+<section id="gold"><h1 align="center"><ins>GOLD</ins></h1></section>
+<section>
+    <div class="products">
+      <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://amzn.in/d/0b0eJgZv">
+        <img src="https://m.media-amazon.com/images/I/71WSo5YxvSL._SY695_.jpg" alt=""></a>
+
+        <h3>SALTY Diamond Drape Tassel Necklace for Women & Girlsn</h3>
+
+        <div class="rating">
+            ★★★★★ <span>159 reviews</span>
+        </div>
+        <h4>400$</h4>
+        <button class="cart-btn"
+data-name="Diamond Drape Tassel Necklace"
+data-price="400">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/052wxoXO">
+        <img src="https://m.media-amazon.com/images/I/61+YESDwLuL._AC_UY1000_.jpg" alt=""></a>
+
+        <h3>Uncommon James Duchess Necklace <br>| Gold</h3>
+
+        <div class="rating">
+            ★★★★★ <span>134 reviews</span>
+        </div>
+        <h4>360$</h4>
+       <button class="cart-btn"
+data-name="Uncommon James Duchess Necklace"
+data-price="360">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/06baajAc">
+        <img src="https://m.media-amazon.com/images/I/61QWSGjj+JL._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3>14K Gold Plated Hand Chain for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>120 reviews</span>
+        </div>
+
+        <h4>9.99$</h4>
+        <button class="cart-btn"
+data-name="14K Gold Plated Hand Chain for Women"
+data-price="9.99">
+🛒 Add to Cart
+</button>
+    </div>
+       <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0gfw1y7v">
+        <img src="https://m.media-amazon.com/images/I/61JraPUTkoL._AC_SY675_.jpg" alt="dold ankle"></a>
+
+        <h3>DEARMAY Gold Ankle Bracelets for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>24 reviews</span>
+        </div>
+
+        <h4>9.99$</h4>
+       <button class="cart-btn"
+data-name="DEARMAY Gold Ankle Bracelets for Women"
+data-price="9.99">
+🛒 Add to Cart
+</button>
+    </div>
+  <div class="card">
+    <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/01qEhfDQ">
+        <img src="https://m.media-amazon.com/images/I/51f0blQ3tLL._AC_SY675_.jpg" alt="earrings"></a>
+
+        <h3>14K Gold Plated Earrings for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>20 reviews</span>
+             </div>
+
+        <h4>13.99$</h4>
+      <button class="cart-btn"
+data-name="14K Gold Plated Earrings for Women"
+data-price="13.99">
+🛒 Add to Cart
+</button>
+        </div>
+         <div class="card">
+            <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0gYQ07bX">
+        <img src="https://m.media-amazon.com/images/I/41GCNCr6QOL._AC_SX679_.jpg" alt="earrings"></a>
+
+        <h3> Pearl Bow Earrings Gold Bow Earrings Bow Pearl</h3>
+
+        <div class="rating">
+            ★★★★★ <span>279 reviews</span>
+             </div>
+
+        <h4>23$</h4>
+      <button class="cart-btn"
+data-name="Pearl Bow Earrings"
+data-price="23">
+🛒 Add to Cart
+</button>
+        </div>
+           <div class="card">
+            <button class="wishlist-btn">♡</button>
+        <a href="https://amzn.in/d/0gRhtmXZ">
+        <img src="https://m.media-amazon.com/images/I/71aVfZNAHLL._SY695_.jpg" alt="earrings"></a>
+
+        <h3> Zircon Earrings Gold Plated Dangle Womens Fashion Jewelry </h3>
+
+        <div class="rating">
+            ★★★★★ <span>200 reviews</span>
+             </div>
+
+        <h4>159$</h4>
+     <button class="cart-btn"
+data-name="Zircon Earrings Gold Plated"
+data-price="159">
+🛒 Add to Cart
+</button>
+        </div>
+         <div class="card">
+            <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0awzZf65">
+        <img src="https://m.media-amazon.com/images/I/71Q-NRDPJ1L._AC_SY675_.jpg" alt="earrings"></a>
+
+        <h3> 4 Pcs Gold Hand Chain Bracelets for Women </h3>
+
+        <div class="rating">
+            ★★★★★ <span>379 reviews</span>
+             </div>
+
+        <h4>9.99$</h4>
+       <button class="cart-btn"
+data-name="4 Pcs Gold Hand Chain Bracelets"
+data-price="9.99">
+🛒 Add to Cart
+</button>
+        </div>
+         <div class="card">
+            <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/06R4E6Q5">
+        <img src="https://m.media-amazon.com/images/I/815EFxnAE0L._AC_SY675_.jpg" alt="earrings"></a>
+
+        <h3> 14K Gold Plated Minimalist Bracelets </h3>
+
+        <div class="rating">
+            ★★★★★ <span>473 reviews</span>
+             </div>
+
+        <h4>12$</h4>
+      <button class="cart-btn"
+data-name="14K Gold Plated Minimalist Bracelets"
+data-price="12">
+🛒 Add to Cart
+</button>
+        </div>
+</div>
+</section>
+<hr id="diamond">
+<section>
+    <h1 align="center"><ins>DIAMOND</ins></h1>
+</section>
+<div class="products">
+
+    <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0e6ClU1k">
+        <img src="https://m.media-amazon.com/images/I/71bOJr9ri0L._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3>37pcs Silver Jewelry Set With 3 PCS Necklace</h3>
+
+        <div class="rating">
+            ★★★★★ <span>120 reviews</span>
+        </div>
+
+        <h4>13.99$</h4>
+        <button class="cart-btn"
+data-name="37pcs Silver Jewelry Set With 3 PCS Necklace"
+data-price="13.99">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0a7thrno">
+        <img src="https://m.media-amazon.com/images/I/61HMc9qiscL._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3> Boho Wedding Small Rhinestone Solitaire Dainty Cz Necklace Silver Tiny Pendant</h3>
+        <div class="rating">
+            ★★★★★ <span>293 reviews</span>
+        </div>
+
+        <h4>8.50$</h4>
+      <button class="cart-btn"
+data-name="Boho Wedding Small Rhinestone Solitaire Necklace"
+data-price="8.50">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/08OAXBSg">
+        <img src="https://m.media-amazon.com/images/I/51BNDhenTYL._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3>Shiny Silver Cubic Zirconia Tassel Earrings for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span> 175 reviews</span>
+        </div>
+
+        <h4>8.99$</h4>
+      <button class="cart-btn"
+data-name="Silver Cubic Zirconia Tassel Earrings"
+data-price="8.99">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://amzn.in/d/02q490Vi">
+        <img src="https://m.media-amazon.com/images/I/71obxkfGypL._SY695_.jpg" alt="hand chain"></a>
+
+        <h3>Silver Bow Necklace for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>280 reviews</span>
+        </div>
+
+        <h4>30$</h4>
+       <button class="cart-btn"
+data-name="Silver Bow Necklace for Women"
+data-price="30">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://www.amazon.com/Tatibana-Bracele-Bracelets-Adjustable-Bracelet/dp/B0C7PZQC4C/ref=sr_1_9?crid=2OS7RAP0G93PG&dib=eyJ2IjoiMSJ9.zXUcNTFykWqdE8kGTW5JAey1qig0GP28QW4O6ZJGbYLgkzudZuXGAnKelqaKoQKV6bneELkZ1khpj9s2ZZMDmfqv-4T0oszSOZeiglCrsyKGkUQBmCH8_98XHGUaF0o5F8Rp_yI-NO-34OGqPJGzRzGTJD_4lu5Q6RoeaQAnPrrF0_0YMPKtMhve09YUoQAnqqFKar4vsE4uTVkEx6mOFduFJU_pRKRmdn9Z3Cb-3BDbwKm4PfNtT25HyUc-Rvv6QfSTSSvc7e-47plreSr2FbLpMKxEzbUSybnsbWymbmQ.LNsm7rKAnWQqm05PIz7fdtG0al1AjLJEtO0NrhaMEH8&dib_tag=se&keywords=diamond+jewelry&qid=1784460818&sprefix=diamond+jewelry%2Caps%2C395&sr=8-9">
+        <img src="https://m.media-amazon.com/images/I/61uBgjRBQZL._AC_SY675_.jpg" alt=""></a>
+
+        <h3>Tennis  Bracelet</h3>
+
+        <div class="rating">
+            ★★★★★ <span>244 reviews</span>
+        </div>
+
+        <h4>6$</h4>
+       <button class="cart-btn"
+data-name="Tennis Bracelet"
+data-price="6">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0bv9QFRH">
+        <img src="https://m.media-amazon.com/images/I/61QCTa5cfAL._AC_SY675_.jpg" alt=""></a>
+
+        <h3>CHIC & ARTSY 925 Sterling Silver Ankle Bracelets for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span>159 reviews</span>
+        </div>
+
+        <h4>35.95$</h4>
+       <button class="cart-btn"
+data-name="925 Sterling Silver Ankle Bracelet"
+data-price="35.95">
+🛒 Add to Cart
+</button>
+    </div>
+
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://amzn.eu/d/0dNqnHr5">
+        <img src="https://m.media-amazon.com/images/I/61xEGQ76ulL._SX522_.jpg" alt="hand chain"></a>
+
+        <h3>Star Stud Earrings Silver Star Earrings Tiny Starburst</h3>
+
+        <div class="rating">
+            ★★★★★ <span> 278 reviews</span>
+        </div>
+
+        <h4>$ 7.99</h4>
+       <button class="cart-btn"
+data-name="Star Stud Earrings"
+data-price="7.99">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0iFb2hXX">
+        <img src="https://m.media-amazon.com/images/I/61tqCuhvJ6L._AC_SY675_.jpg" alt="hand chain"></a>
+
+        <h3>QLKILYR Silver Link Bracelet for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span> 273 reviews</span>
+        </div>
+
+        <h4>8.45$</h4>
+       <button class="cart-btn"
+data-name="QLKILYR Silver Link Bracelet"
+data-price="8.45">
+🛒 Add to Cart
+</button>
+    </div>
+     <div class="card">
+        <button class="wishlist-btn">♡</button>
+        <a href="https://a.co/d/0dzIH7Z2">
+        <img src="https://m.media-amazon.com/images/I/513pYFH27DL._AC_SY535_.jpg" alt="hand chain"></a>
+
+        <h3>SLUYNZ Sterling Silver CZ Love Heart Hoop Earrings for Women</h3>
+
+        <div class="rating">
+            ★★★★★ <span> 274 reviews</span>
+        </div>
+
+        <h4>22.99$</h4>
+      <button class="cart-btn"
+data-name="Sterling Silver CZ Heart Hoop Earrings"
+data-price="22.99">
+🛒 Add to Cart
+</button>
+    </div>
+    
+</div>
+<hr id="contact">
+<section>
+<div class="box"><h1 align="center"> CONTACT US</h1>
+<p><h2 align="center">⌖ Main Road<br>
+    ☏ 0302-3921064<br>
+    ✉ itsagmailid@gmail.com</h2>
+</div></section>
+<footer><h1 align="center">@THE JEWLER</h1>
+    <body>
+<script>
+
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.getElementById("menu-btn");
+
+function openMenu() {
+    sidebar.classList.add("active");
+    menuBtn.style.display = "none";
+}
+
+function closeMenu() {
+    sidebar.classList.remove("active");
+    menuBtn.style.display = "block";
+}
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartElement = document.getElementById("cart");
+const cartItems = document.getElementById("cart-items");
+const cartCount = document.getElementById("cart-count");
+const total = document.getElementById("total");
+
+function toggleCart() {
+    cartElement.classList.toggle("active");
+}
+
+document.querySelectorAll(".cart-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const item = {
+            name: this.dataset.name,
+            price: parseFloat(this.dataset.price)
+        };
+
+        cart.push(item);
+
+        saveCart();
+        updateCart();
+
+    });
+
+});
+
+function removeItem(index) {
+
+    cart.splice(index,1);
+
+    saveCart();
+
+    updateCart();
+
+}
+
+function saveCart(){
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+}
+
+function updateCart(){
+
+    cartItems.innerHTML="";
+
+    let sum=0;
+
+    if(cart.length===0){
+
+        cartItems.innerHTML="<p>Your cart is empty.</p>";
+
+    }else{
+
+        cart.forEach((item,index)=>{
+
+            sum+=item.price;
+
+            cartItems.innerHTML+=`
+                <div class="cart-item">
+
+                    <div>
+
+                        <strong>${item.name}</strong><br>
+                        $${item.price.toFixed(2)}
+
+                    </div>
+
+                    <button onclick="removeItem(${index})">✕</button>
+
+                </div>
+            `;
+
+        });
+
+    }
+
+    total.textContent=sum.toFixed(2);
+
+    cartCount.textContent=cart.length;
+
+}
+
+updateCart();
+document.querySelectorAll(".wishlist-btn").forEach(button=>{
+
+    button.addEventListener("click",function(e){
+
+        e.stopPropagation();
+
+        if(this.innerHTML==="♡"){
+
+            this.innerHTML="♥";
+
+            this.style.color="red";
+
+        }else{
+
+            this.innerHTML="♡";
+
+            this.style.color="#c77d1a";
+
+        }
+
+    });
+
+});
+// ================= WISHLIST =================
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+const wishlistElement = document.getElementById("wishlist");
+const wishlistItems = document.getElementById("wishlist-items");
+const wishlistCount = document.getElementById("wishlist-count");
+
+function toggleWishlist(){
+    wishlistElement.classList.toggle("active");
+}
+
+document.querySelectorAll(".wishlist-btn").forEach(button=>{
+
+    button.addEventListener("click",function(e){
+
+        e.stopPropagation();
+
+        const item={
+            name:this.dataset.name,
+            price:parseFloat(this.dataset.price)
+        };
+
+        const exists=wishlist.find(product=>product.name===item.name);
+
+        if(!exists){
+            wishlist.push(item);
+            saveWishlist();
+            updateWishlist();
+            this.innerHTML='<span class="material-icons">favorite</span>';
+            this.style.color="red";
+        }
+
+    });
+
+});
+
+function removeWishlist(index){
+
+    wishlist.splice(index,1);
+
+    saveWishlist();
+
+    updateWishlist();
+
+}
+
+function saveWishlist(){
+
+    localStorage.setItem("wishlist",JSON.stringify(wishlist));
+
+}
+
+function updateWishlist(){
+
+    wishlistItems.innerHTML="";
+
+    if(wishlist.length===0){
+
+        wishlistItems.innerHTML="<p>Your wishlist is empty.</p>";
+
+    }else{
+
+        wishlist.forEach((item,index)=>{
+
+            wishlistItems.innerHTML+=`
+            <div class="cart-item">
+
+                <div>
+                    <strong>${item.name}</strong><br>
+                    $${item.price.toFixed(2)}
+                </div>
+
+                <button onclick="removeWishlist(${index})">✕</button>
+
+            </div>
+            `;
+
+        });
+
+    }
+
+    wishlistCount.textContent=wishlist.length;
+
+}
+
+updateWishlist();
+
+</script>
